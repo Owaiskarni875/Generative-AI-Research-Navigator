@@ -68,10 +68,11 @@ if process_url_clicked:
         main_placeholder.text("FAISS index already exists. Skipping creation.")
         time.sleep(2)
 
+
 query = main_placeholder.text_input("Question: ")
 if query:
     if os.path.exists(file_path) and os.path.exists(docstore_path) and os.path.exists(index_to_docstore_id_path):
-        # Load the FAISS index from a file
+        # Loading the FAISS index from a file
         index = faiss.read_index(file_path)
         print("Loaded FAISS Index: ", index)
 
